@@ -39,11 +39,5 @@
     "restartable": "rs",
     "ignore": [
       "node_moodules/**/node_modules"
-    ],
-    "delay": "2500",
-    "env": {
-      "NODE_ENV": "development",
-      "PORT": 4000
-    }
-  }
+    ]
 }
