@@ -13,7 +13,7 @@ function router(nav) {
       const dbName = 'filoApp';
 
       (async function mongo() {
-        const client = new MongoClient(url, { useNewUrlParser: true });
+        let client = new MongoClient(url, { useNewUrlParser: true });
         try {
           client = await MongoClient.connect(url);
           debug('Connected correctly to the server');
