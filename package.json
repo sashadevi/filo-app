@@ -40,4 +40,5 @@
     "ignore": [
       "node_moodules/**/node_modules"
     ]
+  }
 }
