@@ -9,16 +9,13 @@ module.exports = function localStrategy() {
       usernameField: 'username',
       passwordField: 'password'
     }, (username, password, done) => {
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      } else {
-        url = 'mongodb://localhost:27017';
-      }
+
+      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+
       const dbName = 'filoApp';
 
       (async function usersMongo() {
-        let client;
+        const client = new MongoClient(uri, { useNewUrlParser: true });
 
         try {
           client = await MongoClient.connect(url);
@@ -48,19 +45,14 @@ module.exports = function localStrategy() {
       usernameField: 'username',
       passwordField: 'password'
     }, (username, password, done) => {
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      } else {
-        url = 'mongodb://localhost:27017';
-      }
+      let url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
       const dbName = 'filoApp';
 
       (async function adminUsersMongo() {
         let client;
 
         try {
-          client = await MongoClient.connect(url);
+          const client = new MongoClient(uri, { useNewUrlParser: true });
 
           debug('Connected correctly to the server');
 

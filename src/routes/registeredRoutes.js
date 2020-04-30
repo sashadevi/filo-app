@@ -11,7 +11,7 @@ function router(nav) {
       const dbName = 'filoApp';
 
       (async function mongo() {
-        let client;
+        const client = new MongoClient(uri, { useNewUrlParser: true });
         try {
           client = await MongoClient.connect(url);
           debug('Connected correctly to the server');
@@ -56,7 +56,7 @@ function router(nav) {
       const dbName = 'filoApp';
 
       (async function addItem() {
-        let client;
+        const client = new MongoClient(uri, { useNewUrlParser: true });
         try {
           client = await MongoClient.connect(url);
           debug('Connected correctly to server');
@@ -105,7 +105,7 @@ function router(nav) {
       const dbName = 'filoApp';
 
       (async function addItem() {
-        let client;
+        const client = new MongoClient(uri, { useNewUrlParser: true });
         try {
           client = await MongoClient.connect(url);
           debug('Connected correctly to server');
@@ -142,7 +142,7 @@ function router(nav) {
       const dbName = 'filoApp';
 
       (async function mongo() {
-        let client;
+        const client = new MongoClient(uri, { useNewUrlParser: true });
         try {
           client = await MongoClient.connect(url);
           debug('Connected correctly to server');
