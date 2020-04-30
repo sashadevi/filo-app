@@ -15,7 +15,7 @@ module.exports = function localStrategy() {
       const dbName = 'filoApp';
 
       (async function usersMongo() {
-        const client = new MongoClient(uri, { useNewUrlParser: true });
+        const client = new MongoClient(url, { useNewUrlParser: true });
 
         try {
           client = await MongoClient.connect(url);
@@ -52,7 +52,7 @@ module.exports = function localStrategy() {
         let client;
 
         try {
-          const client = new MongoClient(uri, { useNewUrlParser: true });
+          const client = new MongoClient(url, { useNewUrlParser: true });
 
           debug('Connected correctly to the server');
 
