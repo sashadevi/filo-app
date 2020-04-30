@@ -33,13 +33,7 @@ function router(nav) {
   adminRouter.route('/profile')
     .get((req, res) => {
       debug(req.body);
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      }
-      else {
-        url = 'mongodb://localhost:27017';
-      }
+      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
 
       const dbName = 'filoApp';
 
@@ -86,12 +80,7 @@ function router(nav) {
         itemName
       } = req.body;
       debug(req.body);
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      } else {
-        url = 'mongodb://localhost:27017';
-      }
+      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
       const dbName = 'filoApp';
 
       (async function addItem() {
@@ -129,12 +118,7 @@ function router(nav) {
       const {
         itemName
       } = req.body;
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      } else {
-        url = 'mongodb://localhost:27017';
-      }
+      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
       const dbName = 'filoApp';
 
       (async function addItem() {
@@ -163,12 +147,7 @@ function router(nav) {
     .get((req, res) => {
       const { id } = req.params;
       debug(typeof id);
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      } else {
-        url = 'mongodb://localhost:27017';
-      }
+      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
       const dbName = 'filoApp';
 
       (async function mongo() {
@@ -204,12 +183,7 @@ function router(nav) {
       const {
         itemName, itemCategory, dateFound, user, locationFound, itemColour, itemDescription
       } = req.body;
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      } else {
-        url = 'mongodb://localhost:27017';
-      }
+      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
       const dbName = 'filoApp';
 
       (async function addItem() {

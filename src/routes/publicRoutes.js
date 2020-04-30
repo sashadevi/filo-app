@@ -9,12 +9,7 @@ function router(nav) {
   // public router
   publicRouter.route('/')
     .get((req, res) => {
-      let url;
-      if (process.env.NODE_ENV === 'production') {
-        url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
-      } else {
-        url = 'mongodb://localhost:27017';
-      }
+      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
       const dbName = 'filoApp';
 
       (async function mongo() {
