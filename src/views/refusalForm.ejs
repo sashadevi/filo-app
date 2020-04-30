@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Find The Lost</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/1fcfbf548a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>
+            Welcome to Find the Lost
+        </h1>
+
+        		<!-- begin nav bar -->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+            </ul>
+		  </div>
+		</nav>
+		<!-- end nav bar -->
+
+        <!-- begin about section -->
+		<div class="container about grey" id="about">
+			<h1> About </h1>
+			<p>
+				Find the lost is an online database that can help you find your lost items.
+				You can also add items to our database to help others find their lost items!
+			</p>
+		</div>
+		<!-- end about section -->
+
+	<div class="container public white">
+        <form name="refuse" action="/admin/profile/refuse/submit" method="post">
+            <label class="col-sm-2 col-form-label">Item Name:</label>
+            <div class="col-sm-3">
+                <input id="item-name" name="itemName" class="form-control"> <br>
+            </div>
+        <input type="submit" value="Refuse" />
+        </form>
+    </div>
+
+
+
+
+        <script src="/ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+
+    
+</html>

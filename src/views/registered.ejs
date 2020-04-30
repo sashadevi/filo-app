@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Find The Lost</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/1fcfbf548a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>
+            Welcome to Find the Lost
+        </h1>
+
+		<nav class="navbar navbar-expand-lg bg-dark text-white">
+		  <a class="navbar-brand" href="/">Find the lost</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+                <%for(let i=0; i<nav.length; i++) {%>
+                <li class="nav-item">
+                    <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].title%><a>
+                </li>
+                <%}%>
+            </ul>
+		  </div>
+		</nav>
+
+        <!-- begin about section -->
+		<div class="container" id="about">
+			<h1> About </h1>
+			<p>
+				Find the lost is an online database that can help you find your lost items.
+				You can also add items to our database to help others find their lost items!
+			</p>
+		</div>
+		<!-- end about section -->
+
+        <div class="container">
+            <div class="col">
+                <div class="container public white">
+                    <%for(let i=0; i<items.length; i++) {%>
+                        <div class="row">
+                            <div class="col-md-10 col-sm-9">
+                                <ul>
+                                    <li>Name: <%=items[i].name%></li>
+                                    <li>Category: <%=items[i].category%></li>
+                                    <li>Date found: <%=items[i].date%></li>
+                                    <li>Colour: <%=items[i].colour%></li>
+                                </ul>
+                                <a href="/auth/registered/<%=items[i]._id%>">Click to view more</a>
+                            </div>
+                        </div>
+                    <%}%>
+                    <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <form name="addItem" action="/auth/registered/additem" method="get">
+                        <div class="form-group">
+                            <input type="submit" value="Add Item" />
+                        </div>
+                    </form> <br>
+                </div>
+
+                <div class="col">
+                    <form name="requestItem" action="/auth/registered/requestitem" method="get">
+                        <div class="form-group">
+                            <input type="submit" value="Request Item" />
+                        </div>
+                    </form> <br>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script src="/ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+
+    
+</html>
