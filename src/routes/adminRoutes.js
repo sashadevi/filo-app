@@ -9,7 +9,7 @@ const adminRouter = express.Router();
 function router(nav) {
   adminRouter.route('/')
     .get((req, res) => {
-      res.render('adminSignIn',
+      res.render('adminSignn',
         {
           nav: [{ link: '/', title: 'Home' },
             { link: '/public', title: 'View Items' },
