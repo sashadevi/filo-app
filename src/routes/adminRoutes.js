@@ -33,7 +33,7 @@ function router(nav) {
   adminRouter.route('/profile')
     .get((req, res) => {
       debug(req.body);
-      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
 
       const dbName = 'filoApp';
 
@@ -80,7 +80,7 @@ function router(nav) {
         itemName
       } = req.body;
       debug(req.body);
-      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
       const dbName = 'filoApp';
 
       (async function addItem() {
@@ -118,7 +118,7 @@ function router(nav) {
       const {
         itemName
       } = req.body;
-      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
       const dbName = 'filoApp';
 
       (async function addItem() {
@@ -147,7 +147,7 @@ function router(nav) {
     .get((req, res) => {
       const { id } = req.params;
       debug(typeof id);
-      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
       const dbName = 'filoApp';
 
       (async function mongo() {
@@ -183,7 +183,7 @@ function router(nav) {
       const {
         itemName, itemCategory, dateFound, user, locationFound, itemColour, itemDescription
       } = req.body;
-      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
       const dbName = 'filoApp';
 
       (async function addItem() {

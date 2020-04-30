@@ -9,7 +9,7 @@ function router(nav) {
   // public router
   publicRouter.route('/')
     .get((req, res) => {
-      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
       const dbName = 'filoApp';
 
       (async function mongo() {

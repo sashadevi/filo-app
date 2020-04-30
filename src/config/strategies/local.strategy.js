@@ -10,7 +10,7 @@ module.exports = function localStrategy() {
       passwordField: 'password'
     }, (username, password, done) => {
 
-      const url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
 
       const dbName = 'filoApp';
 
@@ -45,7 +45,7 @@ module.exports = function localStrategy() {
       usernameField: 'username',
       passwordField: 'password'
     }, (username, password, done) => {
-      let url = 'mongodb+srv://180038020:aston@cluster0-is3sf.mongodb.net/test?retryWrites=true&w=majority';
+      const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
       const dbName = 'filoApp';
 
       (async function adminUsersMongo() {
