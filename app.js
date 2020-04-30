@@ -59,6 +59,5 @@ app.get('/', (req, res) => {
   );
 });
 
-app.listen(port, () => {
-  debug(`Listening at port + ${chalk.green('3000')}`);
-});
+app.listen(port);
+module.exports = app;
