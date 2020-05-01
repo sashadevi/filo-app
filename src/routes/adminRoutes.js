@@ -35,7 +35,7 @@ function router(nav) {
       debug(req.body);
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
 
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function mongo() {
         let client = new MongoClient(url, { useNewUrlParser: true });
@@ -81,7 +81,7 @@ function router(nav) {
       } = req.body;
       debug(req.body);
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function addItem() {
         let client = new MongoClient(url, { useNewUrlParser: true });
@@ -119,7 +119,7 @@ function router(nav) {
         itemName
       } = req.body;
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function addItem() {
         let client = new MongoClient(url, { useNewUrlParser: true });
@@ -148,7 +148,7 @@ function router(nav) {
       const { id } = req.params;
       debug(typeof id);
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function mongo() {
         let client = new MongoClient(url, { useNewUrlParser: true });
@@ -184,7 +184,7 @@ function router(nav) {
         itemName, itemCategory, dateFound, user, locationFound, itemColour, itemDescription
       } = req.body;
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function addItem() {
         let client = new MongoClient(url, { useNewUrlParser: true });

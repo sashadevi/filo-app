@@ -8,7 +8,7 @@ function router(nav) {
   registeredRouter.route('/')
     .get((req, res) => {
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function mongo() {
         let client = new MongoClient(url, { useNewUrlParser: true });
@@ -53,7 +53,7 @@ function router(nav) {
         name, category, date, username, location, colour, description
       } = req.body;
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function addItem() {
         let client = new MongoClient(url, { useNewUrlParser: true });
@@ -102,7 +102,7 @@ function router(nav) {
         itemName, description, userRequesting
       } = req.body;
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function addItem() {
         let client = new MongoClient(url, { useNewUrlParser: true });
@@ -139,7 +139,7 @@ function router(nav) {
       const { id } = req.params;
       debug(typeof id);
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function mongo() {
         let client = new MongoClient(url, { useNewUrlParser: true });

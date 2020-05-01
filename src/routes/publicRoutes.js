@@ -10,7 +10,7 @@ function router(nav) {
   publicRouter.route('/')
     .get((req, res) => {
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function mongo() {
         let client = new MongoClient(url, { useNewUrlParser: true });

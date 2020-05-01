@@ -12,7 +12,7 @@ module.exports = function localStrategy() {
 
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
 
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function usersMongo() {
        let client = new MongoClient(url, { useNewUrlParser: true });
@@ -46,7 +46,7 @@ module.exports = function localStrategy() {
       passwordField: 'password'
     }, (username, password, done) => {
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function adminUsersMongo() {
         let client = new MongoClient(url, { useNewUrlParser: true });

@@ -10,7 +10,7 @@ function router(nav) {
     .post((req, res) => {
       const { username, password, password2 } = req.body;
       const url = 'mongodb://180038020:aston1234@ds013206.mlab.com:13206/heroku_19bpkr91';
-      const dbName = 'filoApp';
+      const dbName = 'heroku_19bpkr91';
 
       (async function addUser() {
         let client = new MongoClient(url, { useNewUrlParser: true });
